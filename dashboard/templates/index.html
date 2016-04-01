@@ -1,0 +1,31 @@
+{% extends "base_template.html" %}
+{% block body %}
+{% raw %}
+<body>
+<div class="container" ng-app>
+    <form class="form-signin">
+        <h2 class="form-signin-heading">What you type here:</h2>
+
+        <input ng-model="data.input" type="text" class="form-control" autofocus>
+
+        <h2 class="form-signin-heading">It will also be shown below:</h2>
+        <input type="text" class="sr-only">{{data.input}}</label>
+        <a class='btn btn-default'> Some button </a>
+        <a class='btn btn-danger'> Some button </a>
+    </form>
+
+    <div class="bs-callout bs-callout-default">
+        <h4>Default Callout</h4>
+        This is a default callout.
+    </div>
+
+    <div class="bs-callout bs-callout-primary">
+        <h4>Primary Callout</h4>
+        This is a primary callout.
+    </div>
+    <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+</div>
+</body>
+{% endraw %}
+{% endblock %}
+

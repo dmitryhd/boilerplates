@@ -1,0 +1,11 @@
+*.pyc
+.ipynb_checkpoints
+.coverage
+*.idea
+.~*#
+.noseids
+nohup.out
+
+*.sublime-project
+*.sublime-workspace
+

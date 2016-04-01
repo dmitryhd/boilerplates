@@ -1,0 +1,98 @@
+{% extends "base_template.html" %}
+{% block body %}
+
+{% raw %}
+
+
+<body>
+    <div class="container" ng-app="editorApp" ng-controller="EditorCtrl">
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand img32px" href="#">
+        <img alt="Brand" src="/static/img/favicon-32x32.png">
+      </a>
+      <a class="navbar-brand" href="#">
+        CRM <sub>mini</sub> configuration
+      </a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li>
+            <p class="navbar-btn">
+                <a class="btn btn-success" ng-click='save()'>
+                    Save
+                </a>
+            </p>
+        </li>
+        <li>
+            <p class="navbar-btn">
+                <a class="btn btn-primary" ng-click='generate()'>
+                    Generate
+                </a>
+            </p>
+        </li>
+        <li>
+            <p class="navbar-btn">
+                <a class="btn btn-primary" ng-click='send()'>
+                    Send
+                </a>
+            </p>
+        </li>
+    </ul>
+</div><!-- /.container-fluid -->
+</nav>
+        <div class=spaced>
+        </div>
+        <ul class="nav nav-tabs">
+            <li class=active><a data-toggle="tab" href="#log-tab">Log</a></li>
+            <li> <a data-toggle="tab" href="#recipients">Recipients</a></li>
+            <li><a data-toggle="tab" href="#sheet-sql">Sheet sql</a></li>
+            <li><a data-toggle="tab" href="#html-template">Html template</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <!-- log -->
+            <div id="log-tab" class="tab-pane fade in active">
+                <div class="panel panel-default editor-tab-panel"> 
+                    <div class="panel-body no-padding">
+                        <pre id="log" class='log-holder editor-tab-panel no-border no-margin'>{% endraw %}{{log}}{% raw %}</pre>
+                    </div>
+                </div>
+            </div>
+            <!-- recipients -->
+            <div id="recipients" class="tab-pane fade in">
+                <div class="panel panel-default editor-tab-panel">
+                    <div class="panel-body no-padding">
+                        <div id="recipients-editor" class="crm-editor">{% endraw %}{{recipients}}{% raw %}</div>
+                    </div>
+                </div>
+            </div>
+            <!-- sheet -->
+            <div id="sheet-sql" class="tab-pane fade in">
+                <div class="panel panel-default editor-tab-panel">
+                    <div class="panel-body no-padding">
+                        <div id="sheet-editor" class="crm-editor">{% endraw %}{{sheet_sql}}{% raw %}</div>
+                    </div>
+                </div>
+            </div>
+            <!-- html-template -->
+            <div id="html-template" class="tab-pane fade in">
+                <div class="panel panel-default editor-tab-panel"> 
+                    <div class="panel-body no-padding">
+                        <div id="html-template-editor" class="crm-editor">{% endraw %}{{html_template}}{% raw %}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endraw %}
+{% endblock %}

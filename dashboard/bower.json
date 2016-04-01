@@ -1,0 +1,27 @@
+{
+  "name": "aaaa",
+  "homepage": "",
+  "authors": [
+    "Dmitriy Khodakov <dmitryhd@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "bower",
+    "angular",
+    "bootstrap"
+  ],
+  "license": "Avito",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "angular": "angularjs#^1.5.0",
+  }
+}

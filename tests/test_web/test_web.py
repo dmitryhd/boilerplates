@@ -5,12 +5,6 @@ import unittest.mock
 import json
 import os.path as path
 
-from crm_mini.dashboard import web_app
-from crm_mini.file_context import Context
-from crm_mini.config import Config
-
-Config['General']['WorkingDir'] = '/tmp/'
-
 
 class TestWeb(unittest.TestCase):
     @classmethod

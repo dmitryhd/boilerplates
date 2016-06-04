@@ -31,7 +31,6 @@ def main():
         return
     args = parse_args()
     log.info('set working dir to: {}'.format(work_dir))
-    sender = Sender()
     if args.command == 'generate':
         pass
     elif args.command == 'send':
